@@ -13,6 +13,7 @@ and http://support.citrix.com/article/CTX118198
 ```` REMOVABLE_SR_UUID=e0f6f5bd-ffc3-0e32-0920-267dfaa2dbf6 ````
 
 the UUID of your Removable storage SR
+
 to get this id run: ````xe sr-list name-label="Removable storage"````
 or open the "Removable storage node" of your Xen Server in XenCenter
 
