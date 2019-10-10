@@ -32,7 +32,7 @@ function attach() {
                 DEVICE_NAME=`echo $VM|cut -d":" -f3`
  
                 #get linux device name (sdb, sdc, sdd, etc) of this USB device
-                LINUX_DEVICE_NAME=`ls /dev/disk/by-id/usb*$USB_ID -l | awk -F"/" '{ print  $NF }'`
+                LINUX_DEVICE_NAME=`ls /dev/disk/by-id/usb*$USB_ID-0:0 -l | awk -F"/" '{ print  $NF }'`
 
                 #get the VDI uuid of this Linux device  
                 VDI=`$XE vdi-list sr-uuid=${REMOVABLE_SR_UUID} location=/dev/xapi/block/$LINUX_DEVICE_NAME --minimal`
